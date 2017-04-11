@@ -4,7 +4,7 @@ Python code used to collect SNMP statistics from Ruckus ZD 3000.  This code was 
 
 This code **may** work with other SNMP devices.  An attempt was made to ensure the polling code was generic to allow for device changes at the event.  How this has not been tested. **This code is provided in good faith only and is not supported.**
 
-# Requirements
+## Requirements
 
 1. Python 3.4.
 1. See [`requirements.txt`] (https://github.com/gingerwizard/ruckus-snmp-poller/requirements.txt) for python library dependencies.
