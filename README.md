@@ -90,6 +90,6 @@ On osx you will need install easy_snmp from source with the following flags - as
 * `ZD_MIBS/*` - MIBS Used for Ruckus ZD
 
 
-##License
+## License
 
 See [LICENSE](https://github.com/gingerwizard/ruckus-snmp-poller/LICENSE)
