@@ -28,7 +28,7 @@ On osx you will need install easy_snmp from source with the following flags - as
 1. `snmp_processor.py` - Provides the core functions for SNMP Polling. The method process_job is used by subsequent scripts. This method should be passed an SNMP_Manager and job instance. Yields documents an iterator.
 2. `snmp_es_indexer.py` - Uses the snmp_processor.py script to poll the SNMP doc and index into Elasticsearch.  The script reads the configured job file through the parameter --job_file (defaults to job_file.json). Each object in the list represents a type of document to index, describing the specification of oid values to field names e.g.
 
-    `{
+    ```{
         "job_name":"AP Stations",
         "key_field":"RUCKUS-ZD-WLAN-MIB::ruckusZDWLANStaMacAddr",
         "key_type":"mac_address",
@@ -48,16 +48,17 @@ On osx you will need install easy_snmp from source with the following flags - as
             "field_name":"avg_rssi"
           }
         }
-    }`
+    }
+    ```
 
     Each job contains the following keys:
     
-        * `job_name` - Name of job. For logging purposes only. **Required**
-        * `key_field` - When creating a document for this specification this oid is used as the key for a document.  All unique values, identified in an snmp_walk, of this oid will be used to create a document instance.  Typically this is a mac address and is used to identify the associated oids values, listed under fields, for each document. **Required**
-        * `key_type` - specifies the type of the `key_field`. Currently only 'mac_address' is supported.
-        * `type` - document type into which the documents will be indexed. **Required**
-        * `fields` - OID to field value mapping. Each oid value is retrieved and added to the appropriate document instance under the field name. This is achieved using an snmp_walk.  The oid value to associate for each document is based on the `key_field` value - currently a mac address. **Required**
-        * `obfuscate_key` - added for the purpose of the demo. Hashes the key field.
+       * `job_name` - Name of job. For logging purposes only. **Required**
+       * `key_field` - When creating a document for this specification this oid is used as the key for a document.  All unique values, identified in an snmp_walk, of this oid will be used to create a document instance.  Typically this is a mac address and is used to identify the associated oids values, listed under fields, for each document. **Required**
+       * `key_type` - specifies the type of the `key_field`. Currently only 'mac_address' is supported.
+       * `type` - document type into which the documents will be indexed. **Required**
+       * `fields` - OID to field value mapping. Each oid value is retrieved and added to the appropriate document instance under the field name. This is achieved using an snmp_walk.  The oid value to associate for each document is based on the `key_field` value - currently a mac address. **Required**
+       * `obfuscate_key` - added for the purpose of the demo. Hashes the key field.
     
     The script in turn polls the configured snmp device, configured through the parameter `snmp_host` (defaults to localhost:161), for each document type indexing the resultant docs into a daily index with the prefix snmp-<datestamp>.  This poll occurs every N seconds - configurable through the parameter `poll_rate` (default 30 seconds).  Documents are timestamped based on the poll time.
     
