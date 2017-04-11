@@ -1,0 +1,15 @@
+certifi==2016.9.26
+cffi==1.9.1
+easysnmp==0.2.4
+elasticsearch==5.2.0
+elasticsearch-xpack==5.0.0
+ply==3.9
+pyasn1==0.1.9
+pycparser==2.17
+pycrypto==2.6.1
+pysmi==0.0.7
+pytz==2016.10
+PyYAML==3.12
+requests==2.13.0
+six==1.10.0
+urllib3==1.19.1

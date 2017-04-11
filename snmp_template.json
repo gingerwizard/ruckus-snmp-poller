@@ -1,0 +1,175 @@
+{
+  "template": "snmp-*",
+  "settings": {
+    "index.refresh_interval": "5s",
+    "number_of_shards": 1,
+    "number_of_replicas": 1
+  },
+  "mappings": {
+    "_default_": {
+      "properties": {
+        "status": {
+          "type": "keyword"
+        },
+        "ip_address": {
+          "type": "ip"
+        },
+        "client_ip": {
+          "type": "ip"
+        },
+        "packets_tx_dropped":{
+          "type":"long"
+        },
+        "re_associate_count":{
+          "type":"long"
+        },
+        "logged_in_user":{
+          "type":"keyword"
+        },
+        "mac_address":{
+          "type":"keyword"
+        },
+        "packets_tx_error":{
+          "type":"long"
+        },
+        "time_joined":{
+          "type":"date",
+          "format": "EEE MMM dd HH:mm:ss yyyy"
+        },
+        "packets_rx":{
+          "type":"long"
+        },
+        "bytes_rx":{
+          "type":"long"
+        },
+        "signal_strength":{
+          "type":"keyword"
+        },
+        "packets_tx":{
+          "type":"long"
+        },
+        "packets_rx_error":{
+          "type":"long"
+        },
+        "avg_rssi":{
+          "type":"integer"
+        },
+        "rssi":{
+          "type":"integer"
+        },
+        "access_point_mac":{
+          "type":"keyword"
+        },
+        "packets_rx_dropped":{
+          "type":"long"
+        },
+        "bytes_tx_retry":{
+          "type":"long"
+        },
+        "packets_tx_success":{
+          "type":"long"
+        },
+        "bytes_tx":{
+          "type":"long"
+        },
+        "rogue_type":{
+          "type":"keyword"
+        },
+        "rogue_ssid":{
+          "type":"keyword"
+        },
+        "radio_type":{
+          "type":"keyword"
+        },
+        "encryption_mode":{
+          "type":"keyword"
+        },
+        "rogue_channel":{
+          "type":"integer"
+        },
+        "dns_secondary":{
+          "type":"ip"
+        },
+        "dns_primary":{
+          "type":"ip"
+        },
+        "num_auth_clients":{
+          "type":"integer"
+        },
+        "send_data_kb":{
+          "type":"long"
+        },
+        "unicast_packets_tx":{
+          "type":"long"
+        },
+        "multicast_packets_rx":{
+          "type":"long"
+        },
+        "receive_data_kb":{
+          "type":"long"
+        },
+        "num_rogue_devices":{
+          "type":"integer"
+        },
+        "unicast_packets_rx":{
+          "type":"long"
+        },
+        "tx_rate_90":{
+          "type":"long"
+        },
+        "rx_rate_90":{
+          "type":"long"
+        },
+        "num_radios":{
+          "type":"integer"
+        },
+        "max_clients_permitted":{
+          "type":"integer"
+        },
+        "packets_rx_success":{
+          "type":"long"
+        },
+        "multicast_packets_tx":{
+          "type":"long"
+        },
+        "packets_dropped":{
+          "type":"long"
+        },
+        "connection_mode":{
+          "type":"keyword"
+        },
+        "bytes_tx_per_sec":{
+          "type":"long"
+        },
+        "bytes_rx_per_sec":{
+          "type":"long"
+        },
+        "meta": {
+          "properties": {
+            "location":{
+              "type":"geo_point"
+            },
+            "name":{
+              "type":"keyword"
+            },
+            "location_name":{
+              "type":"keyword"
+            },
+            "num":{
+              "type":"keyword"
+            },
+            "tags_all":{
+              "type":"keyword"
+            },
+            "tags_on":{
+              "type":"keyword"
+            }
+          }
+        }
+      },
+      "_all": {
+        "enabled": false
+      }
+    }
+  }
+}

@@ -1,0 +1,149 @@
+[
+  {
+    "job_name":"AP Infos",
+    "key_field":"RUCKUS-ZD-WLAN-MIB::ruckusZDWLANAPMacAddr",
+    "key_type":"mac_address",
+    "type":"ap_info",
+    "fields": {
+      "RUCKUS-ZD-WLAN-MIB::ruckusZDWLANAPStatus": {
+          "field_name":"status"
+      },
+      "RUCKUS-ZD-WLAN-MIB::ruckusZDWLANAPIPAddr": {
+        "field_name":"ip_address"
+      },
+      "RUCKUS-ZD-WLAN-MIB::ruckusZDWLANAPNumRadios":{
+        "field_name": "num_radios"
+      },
+      "RUCKUS-ZD-WLAN-MIB::ruckusZDWLANAPNumSta":{
+        "field_name": "num_auth_clients"
+      },
+      "RUCKUS-ZD-WLAN-MIB::ruckusZDWLANAPNumRogues": {
+        "field_name": "num_rogue_devices"
+      },
+      "RUCKUS-ZD-WLAN-MIB::ruckusZDWLANAPConnectionMode": {
+        "field_name": "connection_mode"
+      },
+      "RUCKUS-ZD-WLAN-MIB::ruckusZDWLANAPLANStatsRXByte": {
+        "field_name": "bytes_rx",
+        "rate_field":"bytes_rx_per_sec"
+      },
+      "RUCKUS-ZD-WLAN-MIB::ruckusZDWLANAPLANStatsRXPkt": {
+        "field_name": "packets_rx"
+      },
+      "RUCKUS-ZD-WLAN-MIB::ruckusZDWLANAPLANStatsRXPktErr": {
+        "field_name": "packets_rx_error"
+      },
+      "RUCKUS-ZD-WLAN-MIB::ruckusZDWLANAPLANStatsRXPKTSucc": {
+        "field_name": "packets_rx_success"
+      },
+      "RUCKUS-ZD-WLAN-MIB::ruckusZDWLANAPStaRxBytes": {
+        "field_name": "receive_data_kb"
+      },
+      "RUCKUS-ZD-WLAN-MIB::ruckusZDWLANAPLANStatsTXByte": {
+        "field_name": "bytes_tx",
+        "rate_field":"bytes_tx_per_sec"
+      },
+      "RUCKUS-ZD-WLAN-MIB::ruckusZDWLANAPLANStatsTXPkt": {
+        "field_name": "packets_tx"
+      },
+      "RUCKUS-ZD-WLAN-MIB::ruckusZDWLANAPStaTxBytes": {
+        "field_name": "send_data_kb"
+      },
+      "RUCKUS-ZD-WLAN-MIB::ruckusZDWLANAPLANStatsRXPKTMcast": {
+        "field_name": "multicast_packets_rx"
+      },
+      "RUCKUS-ZD-WLAN-MIB::ruckusZDWLANAPLANStatsTXPKTMcast": {
+        "field_name": "multicast_packets_tx"
+      },
+      "RUCKUS-ZD-WLAN-MIB::ruckusZDWLANAPLANStatsRXPKTUcast": {
+        "field_name": "unicast_packets_rx"
+      },
+      "RUCKUS-ZD-WLAN-MIB::ruckusZDWLANAPLANStatsTXPKTUcast": {
+        "field_name": "unicast_packets_tx"
+      },
+      "RUCKUS-ZD-WLAN-MIB::ruckusZDWLANAPLANStatsDropped": {
+        "field_name": "packets_dropped"
+      },
+      "RUCKUS-ZD-WLAN-MIB::ruckusZDWLANAPDNS1": {
+        "field_name": "dns_primary"
+      },
+      "RUCKUS-ZD-WLAN-MIB::ruckusZDWLANAPDNS2": {
+        "field_name": "dns_secondary"
+      },
+      "RUCKUS-ZD-WLAN-MIB::ruckusZDWLANAPTotalUser": {
+        "field_name": "max_clients_permitted"
+      },
+      "RUCKUS-ZD-WLAN-MIB::ruckusZDWLANAPLANStatsRXByteRate": {
+        "field_name": "rx_rate_90"
+      },
+      "RUCKUS-ZD-WLAN-MIB::ruckusZDWLANAPLANStatsTXByteRate": {
+        "field_name": "tx_rate_90"
+      }
+    }
+  },
+  {
+    "job_name":"AP Stations",
+    "key_field":"RUCKUS-ZD-WLAN-MIB::ruckusZDWLANStaMacAddr",
+    "key_type":"mac_address",
+    "type":"ap_connection",
+    "obfuscate_key":true,
+    "fields": {
+      "RUCKUS-ZD-WLAN-MIB::ruckusZDWLANStaAPMacAddr":{
+        "field_name":"access_point_mac"
+      },
+      "RUCKUS-ZD-WLAN-MIB::ruckusZDWLANStaUser":{
+        "field_name":"logged_in_user"
+      },
+      "RUCKUS-ZD-WLAN-MIB::ruckusZDWLANStaIPAddr":{
+        "field_name":"client_ip"
+      },
+      "RUCKUS-ZD-WLAN-MIB::ruckusZDWLANStaAvgRSSI":{
+        "field_name":"avg_rssi"
+      },
+      "RUCKUS-ZD-WLAN-MIB::ruckusZDWLANStaRxPkts":{
+        "field_name":"packets_rx"
+      },
+      "RUCKUS-ZD-WLAN-MIB::ruckusZDWLANStaRxBytes":{
+        "field_name":"bytes_rx",
+        "rate_field":"bytes_rx_per_sec"
+      },
+      "RUCKUS-ZD-WLAN-MIB::ruckusZDWLANStaTxPkts":{
+        "field_name":"packets_tx"
+      },
+      "RUCKUS-ZD-WLAN-MIB::ruckusZDWLANStaTxBytes":{
+        "field_name":"bytes_tx",
+        "rate_field":"bytes_tx_per_sec"
+      },
+      "RUCKUS-ZD-WLAN-MIB::ruckusZDWLANStaRxError":{
+        "field_name":"packets_rx_error"
+      },
+      "RUCKUS-ZD-WLAN-MIB::ruckusZDWLANStaTxError":{
+        "field_name":"packets_tx_error"
+      },
+      "RUCKUS-ZD-WLAN-MIB::ruckusZDWLANStaTxSuccess":{
+        "field_name":"packets_tx_success"
+      },
+      "RUCKUS-ZD-WLAN-MIB::ruckusZDWLANStaAssocTime":{
+        "field_name":"time_associated"
+      },
+      "RUCKUS-ZD-WLAN-MIB::ruckusZDWLANSta11bgReassoc":{
+        "field_name":"re_associate_count"
+      },
+      "RUCKUS-ZD-WLAN-MIB::ruckusZDWLANStaAssocTimestamp": {
+        "field_name":"time_joined"
+      },
+      "RUCKUS-ZD-WLAN-MIB::ruckusZDWLANStaRetryBytes":{
+        "field_name":"bytes_tx_retry"
+      },
+      "RUCKUS-ZD-WLAN-MIB::ruckusZDWLANStaRxDrop":{
+        "field_name":"packets_rx_dropped"
+      },
+      "RUCKUS-ZD-WLAN-MIB::ruckusZDWLANStaTxDrop": {
+        "field_name":"packets_tx_dropped"
+      },
+      "RUCKUS-ZD-WLAN-MIB::ruckusZDWLANStaSignalStrength": {
+        "field_name":"signal_strength"
+      }
+    }
+  }
+]
