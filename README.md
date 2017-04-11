@@ -10,7 +10,7 @@ This code **may** work with other SNMP devices.  An attempt was made to ensure t
 1. See [requirements.txt](https://github.com/gingerwizard/ruckus-snmp-poller/blob/master/requirements.txt) for python library dependencies.
 1. **NET-SNMP version 5.7.3**.  The python easysnmp will not work without it.
 1. python build packages - `sudo apt-get install libpq-dev python3-dev libxml2-dev libxslt1-dev libldap2-dev libsasl2-dev libffi-dev`
-1. The MIB files for the device being polled must be copied to the the directory `$HOME/.snmp/mibs` or `/usr/local/share/snmp/mibs` for the user under which the script will run.  [MIB files](https://github.com/gingerwizard/ruckus-snmp-poller/ZD_MIBS) for a Ruckas Zone Director are provided, which support the default configuration.
+1. The MIB files for the device being polled must be copied to the the directory `$HOME/.snmp/mibs` or `/usr/local/share/snmp/mibs` for the user under which the script will run.  [MIB files](https://github.com/gingerwizard/ruckus-snmp-poller/tree/master/ZD_MIBS) for a Ruckas Zone Director are provided, which support the default configuration.
 
 
 ## OSX Note for NET-SNMP:
@@ -93,4 +93,4 @@ On osx you will need install easy_snmp from source with the following flags - as
 
 ## License
 
-See [LICENSE](https://github.com/gingerwizard/ruckus-snmp-poller/LICENSE)
+See [LICENSE](https://github.com/gingerwizard/ruckus-snmp-poller/blob/master/LICENSE)
