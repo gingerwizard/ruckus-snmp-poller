@@ -9,7 +9,7 @@ pycparser==2.17
 pycrypto==2.6.1
 pysmi==0.0.7
 pytz==2016.10
-PyYAML==3.12
+PyYAML==5.4
 requests==2.13.0
 six==1.10.0
 urllib3==1.19.1
